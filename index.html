@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Battle ⚔️</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>⚔️ GitHub Battle</h1>
+
+      <!-- Form Section -->
+      <div id="form-section">
+        <div class="player">
+          <h2>Player One</h2>
+          <input type="text" id="player1" placeholder="Enter GitHub username" />
+          <p id="error1" class="error"></p>
+        </div>
+        <div class="player">
+          <h2>Player Two</h2>
+          <input type="text" id="player2" placeholder="Enter GitHub username" />
+          <p id="error2" class="error"></p>
+        </div>
+        <button id="battle-btn">Battle!</button>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Fetching GitHub profiles...</p>
+      </div>
+
+      <!-- Result Section -->
+      <div id="result-section" class="hidden">
+        <div class="player-card" id="player1-card"></div>
+        <div class="player-card" id="player2-card"></div>
+      </div>
+
+      <!-- Reselect And Clear Button -->
+      <div id="action-buttons" class="hidden">
+        <button id="reselect-btn">Reselect Players</button>
+        <button id="clear-btn">Clear Results</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
