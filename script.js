@@ -1,6 +1,7 @@
 const player1Input = document.getElementById("player1");
 const player2Input = document.getElementById("player2");
 const battleBtn = document.getElementById("battle-btn");
+const clearUser = document.getElementById("clear");
 const actionButtons = document.getElementById("action-buttons");
 const reselectBtn = document.getElementById("reselect-btn");
 const clearBtn = document.getElementById("clear-btn");
@@ -10,6 +11,7 @@ const loadingDiv = document.getElementById("loading");
 battleBtn.addEventListener("click", handleBattle);
 reselectBtn.addEventListener("click", resetGame);
 clearBtn.addEventListener("click", clearResults);
+clearUser.addEventListener("click", clearUserName);
 
 async function handleBattle() {
   const user1 = player1Input.value.trim();
@@ -119,4 +121,9 @@ function clearResults() {
   player2Input.value = "";
 
   document.getElementById("form-section").classList.remove("hidden");
+}
+
+function clearUserName() {
+  player1Input.value = "";
+  player2Input.value = "";
 }
